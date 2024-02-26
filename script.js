@@ -4,6 +4,8 @@ var menuLinks = [
     { text: "orders", href: "/orders" },
     { text: "account", href: "/account" },
 ];
+
+
 // Part 1
 //  cache the main element to a new variable
 let mainEl = document.querySelector("main");
@@ -34,5 +36,22 @@ topMenuEl.style.backgroundColor = "var(--top-menu-bg)";
 // Add a class of flex-around to topMenuEl
 topMenuEl.classList.add("flex-around");
 
+// Part 3: Adding Menu Buttons
 
+// Iterate over the entire menuLinks array and for each link object
+for(i = 0; i < menuLinks.length; i++) {
 
+var link = menuLinks[i];
+// Create an anchor element
+let linkEl = document.createElement('a');
+
+// on the new element, add an href attribute with its value to the href property of the link object
+linkEl.href = link.href;
+
+// Set the new element's content to the value of the text property of the link object
+linkEl.textContent = link.text;
+
+// append the new element to topMenuEl element
+topMenuEl.appendChild(linkEl);
+
+}
