@@ -55,3 +55,29 @@ linkEl.textContent = link.text;
 topMenuEl.appendChild(linkEl);
 
 }
+
+
+///////////// DOM MANIPULATION PART 2 OF EXERCISE////////////////
+
+// Creating the submenu ///
+
+// Select and cache the nav id sub-menu element in a new variable called subMenuEl
+let subMenuEl = document.getElementById("sub-menu");
+
+//Set the subMenuEl height to be 100%
+subMenuEl.style.height = "100%";
+
+//Set the subMenuEl to the value stored in the submenubg in CSS custom property
+subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+
+// Add the class of flex-around to the subMenuEl element
+subMenuEl.classList.add("flex-around");
+
+// Set the CSS position property of the subMenuEl to the value of absolute
+subMenuEl.style.position = "absolute";
+
+// Set the CSS top position property of the subMenuEl to the value of 0
+subMenuEl.style.top = "0";
+
+// PART 4: Adding the menu Interaction
+
